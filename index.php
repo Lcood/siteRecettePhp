@@ -1,6 +1,8 @@
-<?php require_once __DIR__. '/templates/header.php';
+<?php 
+require_once __DIR__. '/templates/header.php';
+require_once('lib/recipe.php');
 
-require_once('lib/recipe.php')
+$recipes = getRecipes($pdo, _HOME_LIMIT_);
 
 ?>
 
@@ -22,11 +24,11 @@ require_once('lib/recipe.php')
 
         <section class="container text-center">
             <article class="row text-center">
-               <?php foreach ($recipes as $key => $recipe) { 
+                <?php foreach($recipes as $key => $recipe) { 
 
-                 include __DIR__.'/templates/recipe_part';
+                    include __DIR__.'/templates/recipe_part';
 
-               }?>
+                }?>
 
             </article>
         </section>

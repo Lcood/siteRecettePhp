@@ -1,6 +1,8 @@
 <?php
+    require_once './lib/pdo.php' ;
     require_once './lib/config.php' ;
     
+
     $currentPage = basename($_SERVER["SCRIPT_NAME"]);
 ?>
 
@@ -37,6 +39,5 @@
             </div>
         </div>
     </header>
-
 
     <main>
